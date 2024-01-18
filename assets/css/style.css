@@ -69,11 +69,7 @@ main {
   border-radius: 5px;
   height: 350px;
 }
-.text {
-  text-align: center;
-  width: 300px;
-  margin-left: 50px;
-}
+
 button {
   border: none;
   border-radius: 5px;
