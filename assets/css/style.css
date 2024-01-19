@@ -64,7 +64,7 @@ main {
   font-family: "Roboto", sans-serif;
 }
 .card img {
-  width: 350px;
+  width: 100%;
   margin-top: 52px;
   border-radius: 5px;
   height: 350px;
@@ -86,4 +86,46 @@ footer {
   justify-content: space-around;
   margin-top: 30px;
   font-size: 40px;
+}
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-areas:
+      "navbar main"
+      " navbar main"
+      "footer main";
+    grid-template-columns: 30% 70%;
+    height: 100vh;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .sections {
+    flex-direction: column;
+  }
+  .card {
+    width: 250px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .card img {
+    height: 250px;
+    filter: grayscale(100%);
+    transition: filter 3s ease;
+  }
+  .card img:hover {
+    filter: grayscale(0%);
+  }
+  .footer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: end;
+  }
 }
